@@ -1,0 +1,21 @@
+includes:
+  - .phpstan/phpstan-baseline.neon
+
+parameters:
+  level: 8
+  errorFormat: table
+  phpVersion: 70100 # PHP 7.1
+  bootstrapFiles:
+    - .phpstan/bootstrap.php
+  parallel:
+    jobSize: 20
+    maximumNumberOfProcesses: 32
+    minimumNumberOfJobsPerProcess: 2
+  paths:
+    - global
+    - src
+  scanDirectories:
+    - test
+  excludePaths:
+    analyse:
+      - src/log/TppFileTarget.php

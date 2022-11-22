@@ -1,0 +1,57 @@
+{
+    "name": "imzyf/php-query-array",
+    "type": "library",
+    "description": "Filter Array Like SQL",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "zhaoyifan",
+            "email": "zhaoyifans@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "preferred-install": {
+            "*": "dist"
+        }
+    },
+    "scripts": {
+        "fmt": [
+            "vendor/bin/ecs check --fix"
+        ]
+    },
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5",
+        "symfony/var-dumper": "^4.4",
+        "symplify/easy-coding-standard": "^10.2",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yifans\\QueryArray\\": "src/"
+        },
+        "classmap": [
+        ],
+        "files": [
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Yifans\\QueryArray\\": "tests/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://mirrors.tencent.com/composer/"
+        },
+        {
+            "packagist.org": false
+        }
+    ]
+}
