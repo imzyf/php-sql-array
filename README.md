@@ -8,21 +8,29 @@ AR
 |-- ::updateAll
     |
     |-- db->createCommand() // Command
-        |
-        |-- Command->update() // Command
-                |
-                |-- db->getQueryBuilder() // QueryBuilder
-                |
-                |-- QueryBuilder->update() // string
-                |
-                |-- Command->setSql()->bindValues() // Command
-        |
-        |-- 
+    |
+    |-- Command->update() // Command
+            |
+            |-- db->getQueryBuilder() // QueryBuilder
+            |
+            |-- QueryBuilder->update() // string
+            |
+            |-- Command->setSql()->bindValues() // Command
+    |
+    |-- Command->execute() // int
 
 Clz->updateAll()->db->createCommand()Command->update()->
 
 // 
-QueryArray-> Query->END
+AR
+|
+|-- ::findAll
+    |
+    |-- ::findByCondition // ActiveQueryInterface
+        |
+        |-- ::find()
+    |
+    |-- ActiveQueryInterface->all()
 ``` 
 
 ## Examples

@@ -20,6 +20,9 @@
     "scripts": {
         "fmt": [
             "vendor/bin/ecs check --fix"
+        ],
+        "test": [
+            "vendor/bin/phpunit"
         ]
     },
     "require": {

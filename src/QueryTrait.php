@@ -7,22 +7,25 @@ namespace LizhiDev\QueryArray;
 trait QueryTrait
 {
     /**
-     * @var string|array|ExpressionInterface|null query condition. This refers to the WHERE clause in a SQL statement.
-     *                                            For example, `['age' => 31, 'team' => 1]`.
+     * @var string|array|null query condition. This refers to the WHERE clause in a SQL statement.
+     *                        For example, `['age' => 31, 'team' => 1]`.
      *
      * @see where() for valid syntax on specifying this value.
      */
     public $where;
+
     /**
-     * @var int|ExpressionInterface|null maximum number of records to be returned. May be an instance of [[ExpressionInterface]].
-     *                                   If not set or less than 0, it means no limit.
+     * @var int|null maximum number of records to be returned. May be an instance of [[ExpressionInterface]].
+     *               If not set or less than 0, it means no limit.
      */
     public $limit;
+
     /**
-     * @var int|ExpressionInterface|null zero-based offset from where the records are to be returned.
-     *                                   May be an instance of [[ExpressionInterface]]. If not set or less than 0, it means starting from the beginning.
+     * @var int|null zero-based offset from where the records are to be returned.
+     *               May be an instance of [[ExpressionInterface]]. If not set or less than 0, it means starting from the beginning.
      */
     public $offset;
+
     /**
      * @var array|null how to sort the query results. This is used to construct the ORDER BY clause in a SQL statement.
      *                 The array keys are the columns to be sorted by, and the array values are the corresponding sort directions which
@@ -32,12 +35,14 @@ trait QueryTrait
      *                 will be converted into strings without any change.
      */
     public $orderBy;
+
     /**
      * @var string|callable|null the name of the column by which the query results should be indexed by.
      *                           This can also be a callable (e.g. anonymous function) that returns the index value based on the given
      *                           row data. For more details, see [[indexBy()]]. This property is only used by [[QueryInterface::all()|all()]].
      */
     public $indexBy;
+
     /**
      * @var bool whether to emulate the actual query execution, returning empty or false results
      *
@@ -62,7 +67,7 @@ trait QueryTrait
      *
      * @return $this the query object itself
      */
-    public function indexBy($column): QueryTrait
+    public function indexBy($column)
     {
         $this->indexBy = $column;
 
@@ -74,14 +79,14 @@ trait QueryTrait
      *
      * See [[QueryInterface::where()]] for detailed documentation.
      *
-     * @param string|array|ExpressionInterface $condition the conditions that should be put in the WHERE part
+     * @param string|array $condition the conditions that should be put in the WHERE part
      *
      * @return $this the query object itself
      *
      * @see andWhere()
      * @see orWhere()
      */
-    public function where($condition): QueryTrait
+    public function where($condition)
     {
         $this->where = $condition;
 
@@ -92,15 +97,15 @@ trait QueryTrait
      * Adds an additional WHERE condition to the existing one.
      * The new condition and the existing one will be joined using the 'AND' operator.
      *
-     * @param string|array|ExpressionInterface $condition the new WHERE condition. Please refer to [[where()]]
-     *                                                    on how to specify this parameter.
+     * @param string|array $condition the new WHERE condition. Please refer to [[where()]]
+     *                                on how to specify this parameter.
      *
      * @return $this the query object itself
      *
      * @see where()
      * @see orWhere()
      */
-    public function andWhere($condition): QueryTrait
+    public function andWhere($condition)
     {
         if (null === $this->where) {
             $this->where = $condition;
