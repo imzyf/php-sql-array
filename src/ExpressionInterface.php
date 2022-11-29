@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yifans\QueryArray;
+namespace LizhiDev\QueryArray;
 
 /**
  * Interface ExpressionInterface should be used to mark classes, that should be built

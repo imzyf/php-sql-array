@@ -11,7 +11,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters->set(Option::PARALLEL, true);
     $parameters->set(Option::PATHS, [
         __DIR__.'/src',
-        __DIR__.'/test',
+        __DIR__.'/tests',
         __DIR__.'/ecs.php',
     ]);
 

@@ -1,5 +1,5 @@
 {
-    "name": "imzyf/php-query-array",
+    "name": "lizhi-dev/query-array",
     "type": "library",
     "description": "Filter Array Like SQL",
     "license": "MIT",
@@ -23,7 +23,9 @@
         ]
     },
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "illuminate/support": "^5.8",
+        "lizhi-dev/yii-base": "dev-main"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.5",
@@ -33,7 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yifans\\QueryArray\\": "src/"
+            "LizhiDev\\QueryArray\\": "src/"
         },
         "classmap": [
         ],
@@ -42,16 +44,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\Yifans\\QueryArray\\": "tests/"
+            "Tests\\LizhiDev\\QueryArray\\": "tests/"
         }
     },
     "repositories": [
         {
             "type": "composer",
             "url": "https://mirrors.tencent.com/composer/"
-        },
-        {
-            "packagist.org": false
         }
     ]
 }

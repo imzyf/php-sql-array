@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 include '../vendor/autoload.php';
 
-use \Yifans\SqlArray\Util as Util;
+use Yifans\SqlArray\Util as Util;
 
 $arr1 = [1, 2, 3, 4];
 $arr2 = [1 => [1, 2, 3, 4], 2, 3 => [1, 2, 3], 4];

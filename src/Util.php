@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yifans\QueryArray;
+namespace LizhiDev\QueryArray;
 
 /**
  * some util.
